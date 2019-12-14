@@ -1,10 +1,9 @@
 
 module witchcraft.unittests.noMixin;
 
-import witchcraft;
-
 version(unittest)
 {
+    import witchcraft;
     import std.algorithm;
     import std.array;
 

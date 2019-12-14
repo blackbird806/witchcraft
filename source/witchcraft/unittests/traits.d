@@ -1,8 +1,9 @@
 module witchcraft.unittests.traits;
-import witchcraft.traits;
 
 version (unittest)
 {
+	import witchcraft.traits;
+	
 	class Foo
 	{
 		string value;

@@ -17,7 +17,7 @@ mixin template WitchcraftInterface()
             {
                 static if(is(typeof(__traits(getMember, T, name)) == function))
                 {
-                    static if(name != "__ctor" && name != "__dtor")
+                    static if(name != "__ctor" && name != "__dtor" && !__traits(isDisabled, __traits(getMember, T, name)))
                     {
                         foreach(index, overload; __traits(getOverloads, T, name))
                         {

@@ -1,10 +1,10 @@
 
 module witchcraft.unittests.inheritance;
 
-import witchcraft;
-
 version(unittest)
 {
+    import witchcraft;
+
     abstract class Entity
     {
         mixin Witchcraft;

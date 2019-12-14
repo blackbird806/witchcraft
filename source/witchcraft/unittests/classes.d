@@ -15,7 +15,6 @@ version(unittest)
 		// @disable int disabledValue;
 
 		@disable this();
-		@disable bool opEquals(string)(Foo);
 		
 		this(string username, string password)
 		{
@@ -69,7 +68,7 @@ unittest
 	Class c = User.metaof;
 
 	// User doesn't have a default ctor
-	assert(!__traits(compiles, c.create!T));
+	static assert(!__traits(compiles, c.create!T));
 	auto u = c.create;
 	assert(u is null);
 

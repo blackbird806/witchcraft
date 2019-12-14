@@ -13,6 +13,12 @@ version(unittest)
         string password;
     }
     
+	struct Animal
+	{
+		mixin Witchcraft;
+		@disable bool opEquals(const Animal) { return true ;}
+	}
+
     void testSuite(C)(C metaObject)
     {
         assert(metaObject.isAggregate == true);
@@ -34,4 +40,6 @@ unittest
     
     testSuite(metaObjectByProperty);
     testSuite(metaObjectByFunction);
+
+    Animal platypus;
 }

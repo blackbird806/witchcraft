@@ -1,12 +1,11 @@
 
 module witchcraft.unittests.base;
 
-import witchcraft;
-
 version(unittest)
 {
     import std.algorithm;
     import std.array;
+    import witchcraft;
 
     struct Entity
     {
